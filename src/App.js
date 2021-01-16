@@ -1,43 +1,86 @@
-import {useRef,useEffect} from 'react'
-import logo from './logo.svg';
+import {useEffect} from 'react'
 import './App.css';
-import ScrollMagic from 'scrollmagic'
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
+import stage_bg from './assets/pictures/stage_bg.webp'
+import title from './assets/pictures/title.png'
+import speaker1 from './assets/pictures/speaker1.webp'
 
-import {TweenMax,Power3} from 'gsap';
+
+
 function App() {
-  let logoItem = useRef(null);
-  let textItem = useRef(null);
+ 
 
   useEffect(()=>{
-    // console.log(logoItem);
-    // logoItem.current.style.display ="none";
-    // TweenMax.to(logoItem.current,.8,{
-    //   opacity:1,
-    //   y:-20,
-    //   ease:Power3.easeOut,
-    // });
-    // TweenMax.to(textItem.current,.8,{
-    //   y:-60,
-    //   ease:Power3.easeOut,
-    //   delay:.2
-    // })
-    const controller = new ScrollMagic.Controller();
-    const scence = new ScrollMagic.Scene({
-      triggerElement:"#speakers"
+    gsap.registerPlugin(ScrollTrigger); 
+    
+    gsap.to(".card_type1", {
+      scrollTrigger: {
+        trigger: "#speakers_stage",
+        scrub: true,
+        pin: true,
+        start: "top top",
+        end: "+=200%"
+      },
+      // scaleX: 0, 
+      y:-50,
+      x:10,
+      // transformOrigin: "left center", 
+    //  ease: "none"
     });
+    
+  
 
   },[]);
   return (
     <div className="App">
-      <header>
-        
+      <header id="header">
+          <div className="title">
+            <img src={title} alt="title"/>
+            <span id="title_main">Author's Circle</span>
+            <div id="title_vl"></div>
+            <span id="title_subtitle">By Tedx</span>
+          </div>
       </header>
-      <section id="speakers">
-        <p>First</p>
+
+        <div className="card_type1">
+          <div className="card_header">
+              <div className="ch_container">
+              <div className="black_circle"></div>
+              <span className="handle">@myfriendslvia</span>
+              </div>
+          </div>
+          <div className="speaker_pic">
+            <img src={speaker1} alt=""/>
+          </div>
+          <div className="speaker_desc"></div>
+        </div>
+        <div className="card_type1">
+          <div className="card_header"></div>
+          <div className="speaker_pic"></div>
+          <div className="speaker_desc"></div>
+        </div>
+        <div className="card_type1">
+          <div className="card_header"></div>
+          <div className="speaker_pic"></div>
+          <div className="speaker_desc"></div>
+        </div>
+    
+      <section id="speakers_stage">
+        <img id="stage_bg" src={stage_bg} alt="weird orange bg with distortion"/>
+        <p id="stage_title_1">Creativity</p>
+        <p id="stage_title_2">Unleashed</p>
       </section>
-      <section>
-        <p>Second</p>
-      </section>
+      {/* Speaker Info */}
+      
+    
+
+      {/* Speaker Info */}
+      {/* <section id="footer">
+       
+        <div className="square"></div>
+      </section> */}
+    
     </div>
   );
 }
