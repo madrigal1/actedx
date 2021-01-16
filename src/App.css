@@ -31,6 +31,14 @@ header {
   left: 0;
 }
 
+#header_ss_container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .title {
   /* background-color: red; */
   z-index: 10;
@@ -110,8 +118,6 @@ header {
   height: 100vh;
   width: 100vw;
   background-color: blue;
-  position: absolute;
-  top: 100vh;
 }
 
 .card_type1 {

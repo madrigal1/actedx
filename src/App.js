@@ -16,32 +16,39 @@ function App() {
     
     gsap.to(".card_type1", {
       scrollTrigger: {
-        trigger: "#speakers_stage",
+        trigger: "#header_ss_container",
         scrub: true,
         pin: true,
         start: "top top",
-        end: "+=200%"
+        end: "+=100%",
+        pinSpacing:true
       },
-      // scaleX: 0, 
-      y:-50,
-      x:10,
-      // transformOrigin: "left center", 
-    //  ease: "none"
+      y:-1000,
+     // transformOrigin: "left center", 
+      ease: "none"
     });
-    
   
+    
 
   },[]);
   return (
     <div className="App">
-      <header id="header">
-          <div className="title">
-            <img src={title} alt="title"/>
-            <span id="title_main">Author's Circle</span>
-            <div id="title_vl"></div>
-            <span id="title_subtitle">By Tedx</span>
-          </div>
-      </header>
+      <div id="header_ss_container">
+        <header id="header">
+            <div className="title">
+              <img src={title} alt="title"/>
+              <span id="title_main">Author's Circle</span>
+              <div id="title_vl"></div>
+              <span id="title_subtitle">By Tedx</span>
+            </div>
+        </header>
+        <section id="speakers_stage">
+          <img id="stage_bg" src={stage_bg} alt="weird orange bg with distortion"/>
+          <p id="stage_title_1">Creativity</p>
+          <p id="stage_title_2">Unleashed</p>
+        </section>
+      </div>
+   
 
         <div className="card_type1">
           <div className="card_header">
@@ -66,20 +73,16 @@ function App() {
           <div className="speaker_desc"></div>
         </div>
     
-      <section id="speakers_stage">
-        <img id="stage_bg" src={stage_bg} alt="weird orange bg with distortion"/>
-        <p id="stage_title_1">Creativity</p>
-        <p id="stage_title_2">Unleashed</p>
-      </section>
+    
       {/* Speaker Info */}
       
     
 
       {/* Speaker Info */}
-      {/* <section id="footer">
+      <section id="footer">
        
         <div className="square"></div>
-      </section> */}
+      </section>
     
     </div>
   );
