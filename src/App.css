@@ -26,14 +26,15 @@ header {
   display: flex;
   align-items: center;
   padding: 1.3em 0.5em;
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
+  left: 0; */
+  z-index: 1000000000;
 }
 
 #header_ss_container {
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -75,7 +76,7 @@ header {
 }
 
 #speakers_stage {
-  height: 95vh;
+  height: 100vh;
   width: 100vw;
   /* background: url("./assets/pictures/stage_bg.webp");
   background-size: cover;
@@ -115,7 +116,7 @@ header {
 }
 
 #footer {
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   background-color: blue;
 }
@@ -123,40 +124,43 @@ header {
 .card_type1 {
   margin: 0 auto;
   background-color: #fff;
-  outline: 2px solid blue;
+  /* outline: 2px solid blue; */
   border-radius: 8px;
-  height: 50vh;
+  height: 60vh;
   position: relative;
-  width: 25vw;
+  width: min(70vw, 300px);
   margin: 2em auto;
-  z-index: 1000;
+  z-index: 10;
   top: 100vh;
   display: grid;
-  grid-template-rows:
-    minmax(50px, max-content)
-    minmax(max-content, 310px)
-    minmax(88.30275, max-content);
+  grid-template-rows: 1fr 5fr 3fr;
   grid-template-columns: 1fr;
+  box-shadow: 1 0 0 0.5em rgba(0, 0, 0, 0.08);
+  position: relative;
 }
 
+/* .card_type1 div {
+  outline: 2px solid red;
+} */
+
 .black_circle {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 3rem;
   background-color: black;
   margin-right: 10px;
 }
 
 .card_header {
-  outline: 1px solid red;
-  padding: 0.5em;
   display: flex;
   align-items: center;
   justify-content: "start";
+  font-size: 0.8rem;
 }
 
 .ch_container {
   display: flex;
+  margin: 0.5em;
 }
 
 .speaker_pic {
@@ -165,5 +169,20 @@ header {
 .speaker_pic img {
   outline: 1px solid red;
   width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.speaker_info {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.7em;
+  font-size: 13px;
+}
+
+.speaker_name {
+  font-family: "Times New Roman", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 32px;
 }
