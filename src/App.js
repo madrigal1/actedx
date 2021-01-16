@@ -5,6 +5,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import stage_bg from './assets/pictures/stage_bg.webp'
 import title from './assets/pictures/title.png'
 import speaker1 from './assets/pictures/speaker1.webp'
+import {BsArrowUpRight} from 'react-icons/bs'
+import {IconContext} from 'react-icons'
 
 
 
@@ -40,6 +42,12 @@ function App() {
               <span id="title_main">Author's Circle</span>
               <div id="title_vl"></div>
               <span id="title_subtitle">By Tedx</span>
+            </div>
+            <div className="register_btn">
+              <span>Register</span>
+              <IconContext.Provider value={{ color: "black"}}>
+              <BsArrowUpRight/>
+              </IconContext.Provider>
             </div>
         </header>
         <section id="speakers_stage">

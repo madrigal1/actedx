@@ -25,11 +25,24 @@ header {
   background-color: black;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 1.3em 0.5em;
   /* position: absolute;
   top: 0;
   left: 0; */
   z-index: 1000000000;
+}
+
+.register_btn {
+  width: auto;
+  height: 3em;
+  background-color: #fff;
+  margin-right: 1em;
+  border-radius: 100px;
+  font-size: 2rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
 #header_ss_container {
