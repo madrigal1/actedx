@@ -24,9 +24,10 @@ header {
   height: 8vh;
   background-color: black;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1.3em 0.5em;
+  padding: 0em 0.5em;
   /* position: absolute;
   top: 0;
   left: 0; */
@@ -35,14 +36,28 @@ header {
 
 .register_btn {
   width: auto;
-  height: 3em;
   background-color: #fff;
   margin-right: 1em;
   border-radius: 100px;
-  font-size: 2rem;
+  font-size: 1.3rem;
   display: flex;
   justify-items: center;
   align-items: center;
+  padding: 0.1em 0.3em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  position: relative;
+  top: -2px;
+  right: 2px;
+}
+
+.register_btn:hover,
+.register_btn:focus {
+  background-color: #e4fd18;
+}
+
+.register_btn span {
+  margin-right: 0.2em;
 }
 
 #header_ss_container {

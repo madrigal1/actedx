@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import stage_bg from './assets/pictures/stage_bg.webp'
 import title from './assets/pictures/title.png'
 import speaker1 from './assets/pictures/speaker1.webp'
-import {BsArrowUpRight} from 'react-icons/bs'
+import {FiArrowUpRight} from 'react-icons/fi'
 import {IconContext} from 'react-icons'
 
 
@@ -46,7 +46,7 @@ function App() {
             <div className="register_btn">
               <span>Register</span>
               <IconContext.Provider value={{ color: "black"}}>
-              <BsArrowUpRight/>
+              <FiArrowUpRight/>
               </IconContext.Provider>
             </div>
         </header>
